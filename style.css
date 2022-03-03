@@ -6,24 +6,198 @@
 
 body{
     margin: 0;
-    background-color: #5CA4A9;
     font-family: 'Fredoka', sans-serif;
+    transition: background-color 0.5s linear;
+  }
+
+  /* theme 1 */
+  
+  .theme1{
+    background-color: #5CA4A9;
+    
   }
   
-h1{
-  text-align: center;
-  color: #F4F1B9
+  .theme1 h1{
+    color: #F4F1B9
+  }
+
+  .theme1 .letter-box{
+    border: 2px solid #E6EBE0;
+
+  }
+
+  .theme1 .filled-box{
+    border: 2px solid black;
+
+  }
+  
+  .theme1 .keyboard-button{
+    background-color: #B9C7A8;
+    color: #002E2C;
+    
 }
 
-#game-board {
+.theme1 .keyboard-button:hover{
+  box-shadow: 0 0 7px 3px white inset;
+  /* background: #c5c9c0; */
+}
+
+.theme1 .ent-btn{
+  background-color: #ED6A5A;
+  
+}
+
+.theme1 .ent-btn:hover{
+  box-shadow: 0 0 3px 2px #c4584a inset;
+  
+}
+
+.theme1 .del-btn{
+  background-color: #ED6A5A;
+
+}
+
+.theme1 .del-btn:hover{
+  box-shadow: 0 0 3px 2px #c4584a inset;
+  
+}
+
+.theme1 .tw-toggle{
+  background: #B9C7A8;
+}
+
+.theme1.ball{
+  background: #ED6A5A;
+}
+
+/* end of theme 1 */
+
+/* theme 2 */
+.theme2{
+  background-color: #082032;
+  
+}
+
+.theme2 h1{
+  color: #FF4C29
+}
+
+
+
+.theme2 .keyboard-button{
+  background-color: #2C394B;
+  color: #DDDDDD;
+}
+
+.theme2 .keyboard-button:hover{
+  box-shadow: 0 0 7px 3px #5c86a7 inset;
+  /* background: #c5c9c0; */
+}
+
+.theme2 .ent-btn{
+background-color: #FF4C29;
+
+}
+
+.theme2 .ent-btn:hover{
+  box-shadow: 0 0 3px 2px #c4584a inset;
+  
+}
+
+.theme2 .del-btn{
+background-color: #FF4C29;
+
+}
+
+.theme2 .del-btn:hover{
+  box-shadow: 0 0 3px 2px #c4584a inset;
+  
+}
+
+.theme2 .tw-toggle{
+background: #334756;
+}
+
+.theme2.ball{
+background: #FF4C29;
+}
+
+
+
+
+
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* outline: 1px solid red; */
+  width: 70%;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.tw-toggle {
+  /* background: #95A5A6; */
+  display: inline-block;
+  width: 45px;
+  border-radius: 20px;
+  position:relative;
+  /* border: 2px solid #95A5A6; */
+  height: 22px;
+  
+}
+
+
+.ball{
+  position: absolute;
+  width:13px;
+  height:13px;
+  background-color: hsl(6, 63%, 50%);
+  border-radius: 50%;
+  left: 6px;
+  top: 5px;
+  transition: transform 0.2s linear;
+}
+
+#radio2:checked ~ .ball{
+  transform: translateX(160%);
+}
+
+.radio-label{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: auto;
+  padding: 4px;
+  border-radius: 25px;
+}
+
+.radio-label .btn-radio{
+  display: block;
+  height: 17px;
+  width: 20px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+
+
+
+ #game-board {
     display: flex;
     align-items: center;
     flex-direction: column;
     /* outline: 1px solid black; */
   }
   
-  .letter-box {
-    border: 2px solid #E6EBE0;
+   .letter-box {
     border-radius: 3px;
     margin: 3px;
     font-size: 2rem;
@@ -36,9 +210,7 @@ h1{
     text-transform: uppercase;
   }
   
-  .filled-box {
-    border: 2px solid black;
-  }
+  
   
   .letter-row {
     display: flex;
@@ -66,27 +238,18 @@ h1{
     margin: 0 2px;
     cursor: pointer;
     text-transform: uppercase;
-    background-color: #B9C7A8;
     
     border: none;
-    color: #002E2C;
     font-family: 'Fredoka', sans-serif;
   }
 
-  .keyboard-button:hover{
-    box-shadow: 0 0 7px 3px white inset;
-    /* background: #c5c9c0; */
-  }
+  
   
   .ent-btn{
-    background-color: #ED6A5A;
     /* margin-right: 5px; */
   }
   
-  .ent-btn:hover{
-    box-shadow: 0 0 3px 2px #c4584a inset;
-    
-  }
+  
   
   .del-btn{
     background-color: #ED6A5A;

@@ -8,6 +8,29 @@ let nextLetter = 0;
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
 console.log(rightGuessString);
 
+let radio1 = document.querySelector("#radio1");
+let radio2 = document.querySelector("#radio2");
+let body = document.body;
+
+
+// theme1
+
+radio1.addEventListener("change", function () {
+    if(radio1.checked){
+        body.classList.remove("theme2");
+        body.classList.add("theme1");
+
+    }
+});
+
+// THEME 2
+
+radio2.addEventListener("change", function () {
+    if(radio2.checked){
+        body.classList.remove("theme1");
+        body.classList.add("theme2");
+    }
+});
 
 function wordleBoard(){
     let board = document.getElementById("game-board");
@@ -20,7 +43,7 @@ function wordleBoard(){
     for(let j = 0;j < 5; j++){
         let box = document.createElement("div");
         box.className = "letter-box"
-        box.style.backgroundColor = "#9BC1BC"
+        box.style.backgroundColor =  "#9BC1BC"
         row.appendChild(box)
     }
 
@@ -128,7 +151,7 @@ function checkGuess () {
             // letter is in the right position 
             if (currentGuess[i] === rightGuess[i]) {
                 // shade green 
-                letterColor = 'green'
+                letterColor = '#78BC61'
             } else {
                 // shade box yellow
                 letterColor = '#E6E060'
@@ -172,7 +195,7 @@ function shadeKeyBoard(letter, color) {
                 return
             } 
 
-            if (oldColor === '#E6E060' && color !== 'green') {
+            if (oldColor === '#E6E060' && color !== '#78BC61') {
                 return
             }
 
@@ -222,4 +245,5 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
+
 
