@@ -83,10 +83,9 @@ body{
 }
 
 
-
 .theme2 .keyboard-button{
   background-color: #2C394B;
-  color: #DDDDDD;
+  color: #EEEEEE;
 }
 
 .theme2 .keyboard-button:hover{
@@ -96,7 +95,7 @@ body{
 
 .theme2 .ent-btn{
 background-color: #FF4C29;
-
+color: #DDDDDD;
 }
 
 .theme2 .ent-btn:hover{
@@ -105,7 +104,8 @@ background-color: #FF4C29;
 }
 
 .theme2 .del-btn{
-background-color: #FF4C29;
+  background-color: #FF4C29;
+  color: #DDDDDD;
 
 }
 
@@ -130,15 +130,17 @@ background: #FF4C29;
 .header{
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   /* outline: 1px solid red; */
-  width: 70%;
+  width: 100%;
   margin: auto;
+  margin-bottom:15px
 }
 
 h1{
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  font-size: 25px;
 }
 
 .tw-toggle {
@@ -267,6 +269,16 @@ h1{
   /* desktop */
 
   @media(min-width:600px){
+    .header{
+      justify-content: flex-end;
+      width: 45%;
+      margin-bottom:0
+    }
+
+    h1{
+      font-size: 35px;
+      margin-bottom: 0;
+    }
 
     .keyboard-button{
       padding: 0.9rem;
