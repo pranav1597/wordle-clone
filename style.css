@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #5CA4A9;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+h1{
+  text-align: center;
+  color: #F4F1B9
+}
+
+#game-board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* outline: 1px solid black; */
+  }
+  
+  .letter-box {
+    border: 2px solid #E6EBE0;
+    border-radius: 3px;
+    margin: 3px;
+    font-size: 2rem;
+    font-weight: 600;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  
+  .filled-box {
+    border: 2px solid black;
+  }
+  
+  .letter-row {
+    display: flex;
+  }
+  
+  #keyboard-cont{
+    /* outline: 1px solid black; */
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  #keyboard-cont div{
+    display: flex;
+      margin: 5px 0;
+  }
+  
+  .keyboard-button {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.9rem 0.5rem;
+    margin: 0 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #4D8E93;
+    border: none;
+    color: #002E2C;
+    font-family: 'Fredoka', sans-serif;
+  }
+
+  .keyboard-button:hover{
+    box-shadow: 0 0 7px 3px white inset;
+    /* background: #c5c9c0; */
+  }
+  
+  .ent-btn{
+    background-color: #ED6A5A;
+    /* margin-right: 5px; */
+  }
+  
+  .ent-btn:hover{
+    box-shadow: 0 0 3px 2px #c4584a inset;
+    
+  }
+  
+  .del-btn{
+    background-color: #ED6A5A;
+    /* margin-left: 5px; */
+  }
+  
+  
+  .del-btn:hover{
+    box-shadow: 0 0 7px 3px #c4584a inset;
+
+  }
+    
+    
+  
+  /* desktop */
+
+  @media(min-width:600px){
+
+    .keyboard-button{
+      padding: 0.9rem;
+    margin: 0 4px;
+    }
+
+    .ent-btn{
+      margin-right: 5px;
+    }
+
+    .del-btn{
+      margin-left: 5px;
+    }
+  }
